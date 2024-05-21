@@ -10,6 +10,7 @@ let newgame=document.querySelector(".New-game");
 
 
 let true0;
+//Multidiametional array 
 let winpattern = [
     [0, 1, 2],
     [0, 3, 6],
@@ -21,10 +22,9 @@ let winpattern = [
     [6, 7, 8]
 ];
 
-//reset button    //reset button u click and start the game 
+// any problem your game u can use reset button reset button   click and restart the game  !
+
 const resetgame=()=>{
-
-
     enabledd();
 
     // add the hide class add on your html web page it means jo iski property none vo none kr dega again 
@@ -34,9 +34,11 @@ const resetgame=()=>{
 
 
 
-//disabled box not display
+//disabled box not display it means first click the button and after not any reaction in our button 
+
+
 const disaabled=()=>{
-for(let box of boxes)
+for(let box of boxes)// use a of with for loop for the short syntax 
 {
     box.disabled=true;
 }}
@@ -51,6 +53,8 @@ const enabledd=()=>{
   
     }
 }
+
+
 // axcess all the box in game
 boxes.forEach((box) => {
     box.addEventListener("click", () => {
@@ -90,6 +94,8 @@ console.log("apna kaam khud ")
 
 
 // check winner function write
+
+
 const checkwinner = () => {
     for (let pattern of winpattern) {
         let pos1 = boxes[pattern[0]].innerText;
